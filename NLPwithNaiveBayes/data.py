@@ -19,8 +19,8 @@ test_neg = all_neg_tweets[4000:]
 train_x = train_pos + train_neg
 test_x = test_pos + test_neg
 
-train_y = np.append(np.ones((len(train_pos), 1)), np.zeros((len(train_neg), 1)), axis=0)
-test_y = np.append(np.ones((len(test_pos), 1)), np.zeros((len(test_neg), 1)), axis=0)
+train_y = np.append(np.ones(len(train_pos)), np.zeros(len(train_neg)))
+test_y = np.append(np.ones(len(test_pos)), np.zeros(len(test_neg)))
 
 def load_data(train=True):
     if train:
